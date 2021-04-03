@@ -26,6 +26,10 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+<<<<<<< HEAD
+=======
+**/sent_emails/*
+>>>>>>> 09bcca624d34585813555fdb4b4a7a4ee7b8f9ef
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
