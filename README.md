@@ -18,20 +18,13 @@ YaMDB отправляет письмо с кодом подтверждения
 
 **Администратор (admin)** — полные права на управление проектом и всем его содержимым. Может создавать и удалять произведения, категории и жанры. Может назначать роли пользователям.
 
-# Установка
-Склонируйте репозиторий. Находясь в папке с кодом создайте виртуальное окружение 
-`python -m venv venv`
-Активируйте его 
-Windows: `source venv\scripts\activate`
-Linux/Mac: `sorce venv/bin/activate`
-Установите зависимости `pip install -r requirements.txt`.
-
-Для запуска сервера на локальной машине,  находясь в директории проекта выполните команды:
+# Запуск проекта
 ```
 docker-compose up --build
-docker container ls - найдите id контейнера "web"
+docker container ls - найдите id контейнера с проектом
 docker exec -it <CONTAINER ID> python manage.py makemigrations
 docker exec -it <CONTAINER ID> python manage.py migrate
+docker exec -it <CONTAINER ID> python manage.py collectstatic
 docker exec -it <CONTAINER ID> python manage.py createsuperuser
 ```
 Админка доступна по адресу '/admin'
