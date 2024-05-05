@@ -7,7 +7,7 @@ SECRET_KEY = 'p&l%385148kslhtyn^##a1)ilz@4zqj=rq&agdol^##zgl9(vs'
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['178.154.222.34']
+ALLOWED_HOSTS = ['*']
 
 
 INSTALLED_APPS = [
@@ -53,7 +53,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'api_yamdb.wsgi.application'
-
 
 DATABASES = {
     'default': {
