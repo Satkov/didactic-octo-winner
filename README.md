@@ -28,9 +28,12 @@ Linux/Mac: `sorce venv/bin/activate`
 
 Для запуска сервера на локальной машине,  находясь в директории проекта выполните команды:
 ```
-python manage.py migrate
-python manage.py createsuperuser
-python manage.py runserver
+docker-compose up --build
+docker container ls - найдите id контейнера "web"
+docker exec -it <CONTAINER ID> python manage.py makemigrations
+docker exec -it <CONTAINER ID> python manage.py migrate
+docker exec -it <CONTAINER ID> python manage.py createsuperuser
 ```
+Админка доступна по адресу '/admin'
 Документацию к проекту можно посмотреть на странице `/redoc`
 Проект запущен и доступен по адресу [localhost:8000](http://localhost:8000/).
